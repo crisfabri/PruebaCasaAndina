@@ -1,0 +1,604 @@
+{
+	"info": {
+		"_postman_id": "4b62e09c-66a4-4503-aafb-502f75321506",
+		"name": "Casa Andina",
+		"description": "API REST para vista de hotel de Casa Andina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12357423"
+	},
+	"item": [
+		{
+			"name": "Hoteles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://127.0.0.1:8000/api/hoteles",
+				"description": "Lista de todos los hoteles, solo incluyendo su htl_tit, htl_img y htl_id."
+			},
+			"response": [
+				{
+					"name": "Hoteles",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://127.0.0.1:8000/api/hoteles"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:41:14 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:41:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"htl_tit\": \"{\\\"es\\\":\\\"Hotel 1\\\"}\",\n        \"htl_img\": \"{\\\"es\\\":\\\"DgzWHwVVvEhuS1YwOoAHvngONx7S4N-metaYmFubmVyLWFxcCAoMSkucG5n-.png\\\"}\",\n        \"htl_id\": 1\n    },\n    {\n        \"htl_tit\": \"Casa Andina Select Arequipa Plaza\",\n        \"htl_img\": \"https://s3.us-east-1.amazonaws.com/multimediaqa.casa-andina.com/images/1440X600_casaandinaselectarequipadestacada.jpg\",\n        \"htl_id\": 2\n    },\n    {\n        \"htl_tit\": \"Casa Andina Standard Arequipa\",\n        \"htl_img\": \"https://s3.us-east-1.amazonaws.com/multimediaqa.casa-andina.com/images/1440X600_casaandinastandardarequipadestacada.jpg\",\n        \"htl_id\": 3\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Hoteles - Premium",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/hoteles?tipohotel=Premium",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"hoteles"
+					],
+					"query": [
+						{
+							"key": "tipohotel",
+							"value": "Premium"
+						}
+					]
+				},
+				"description": "Lista de todos los hoteles, solo incluyendo su htl_tit, htl_img y htl_id, filtrando por tipo de hotel Premium"
+			},
+			"response": [
+				{
+					"name": "Hoteles - Tipo Hotel",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/hoteles?tipohotel=Premium",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"hoteles"
+							],
+							"query": [
+								{
+									"key": "tipohotel",
+									"value": "Premium"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:54:19 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:54:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"htl_tit\": \"{\\\"es\\\":\\\"Hotel 1\\\"}\",\n        \"htl_img\": \"{\\\"es\\\":\\\"DgzWHwVVvEhuS1YwOoAHvngONx7S4N-metaYmFubmVyLWFxcCAoMSkucG5n-.png\\\"}\",\n        \"htl_id\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Hoteles - Standard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/hoteles?tipohotel=Standard",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"hoteles"
+					],
+					"query": [
+						{
+							"key": "tipohotel",
+							"value": "Standard"
+						}
+					]
+				},
+				"description": "Lista de todos los hoteles, solo incluyendo su htl_tit, htl_img y htl_id, filtrando por tipo de hotel Standard"
+			},
+			"response": [
+				{
+					"name": "Hoteles - Standard",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/hoteles?tipohotel=Standard",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"hoteles"
+							],
+							"query": [
+								{
+									"key": "tipohotel",
+									"value": "Standard"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:54:25 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:54:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"htl_tit\": \"Casa Andina Standard Arequipa\",\n        \"htl_img\": \"https://s3.us-east-1.amazonaws.com/multimediaqa.casa-andina.com/images/1440X600_casaandinastandardarequipadestacada.jpg\",\n        \"htl_id\": 3\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Hoteles - Asociados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/hoteles?tipohotel=Asociados",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"hoteles"
+					],
+					"query": [
+						{
+							"key": "tipohotel",
+							"value": "Asociados"
+						}
+					]
+				},
+				"description": "Lista de todos los hoteles, solo incluyendo su htl_tit, htl_img y htl_id, filtrando por tipo de hotel Asociados"
+			},
+			"response": [
+				{
+					"name": "Hoteles - Asociados",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/hoteles?tipohotel=Asociados",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"hoteles"
+							],
+							"query": [
+								{
+									"key": "tipohotel",
+									"value": "Asociados"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:44:03 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:44:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "Hotel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/hoteles/1",
+				"description": "Información detallada de un solo hotel, donde se muestre el hotel con id 1 y la información del tipo de hotel. Se muestra la siguiente información de la tabla hotel: htl_tit, htl_img y htl_id. Y de la tabla tipo hotel serán tht_id y tht_id."
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/hoteles/1"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:44:41 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:44:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"htl_tit\": \"{\\\"es\\\":\\\"Hotel 1\\\"}\",\n    \"htl_img\": \"{\\\"es\\\":\\\"DgzWHwVVvEhuS1YwOoAHvngONx7S4N-metaYmFubmVyLWFxcCAoMSkucG5n-.png\\\"}\",\n    \"htl_id\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Hotel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/hoteles/2",
+				"description": "Información detallada de un solo hotel, donde se muestre el hotel con id 2 y la información del tipo de hotel. Se muestra la siguiente información de la tabla hotel: htl_tit, htl_img y htl_id. Y de la tabla tipo hotel serán tht_id y tht_id."
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/hoteles/2"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:45:31 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:45:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"htl_tit\": \"{\\\"es\\\":\\\"Hotel 1\\\"}\",\n    \"htl_img\": \"{\\\"es\\\":\\\"DgzWHwVVvEhuS1YwOoAHvngONx7S4N-metaYmFubmVyLWFxcCAoMSkucG5n-.png\\\"}\",\n    \"htl_id\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Hotel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/hoteles/3",
+				"description": "Información detallada de un solo hotel, donde se muestre el hotel con id 3 y la información del tipo de hotel. Se muestra la siguiente información de la tabla hotel: htl_tit, htl_img y htl_id. Y de la tabla tipo hotel serán tht_id y tht_id."
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/hoteles/3"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:47:16 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 13:47:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.6"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"htl_tit\": \"{\\\"es\\\":\\\"Hotel 1\\\"}\",\n    \"htl_img\": \"{\\\"es\\\":\\\"DgzWHwVVvEhuS1YwOoAHvngONx7S4N-metaYmFubmVyLWFxcCAoMSkucG5n-.png\\\"}\",\n    \"htl_id\": 1\n}"
+				}
+			]
+		}
+	]
+}
